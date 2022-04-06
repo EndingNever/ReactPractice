@@ -25,11 +25,15 @@ function App() {
     },
   ];
 
+  const addExpenseHandler = expense => { // With our information passed from the child, we get data from ExpenseForm, pass it through NewExpense, and bring it up to our App.js
+    console.log("In App.js")
+    console.log(expense);
+  }
 
 
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} /> {/* We pass our functon addExpenseHandler and assign it as a prop named onAddExpense */}
       <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
