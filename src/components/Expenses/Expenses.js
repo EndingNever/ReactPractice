@@ -17,8 +17,8 @@ export default function Expenses(props) {
     return (
         <div>
             <Card className="expenses">
-                {/* <ExpensesChart expenses={filteredExpenses}/> */}
-                <ExpensesList items={filteredExpenses}/>
+                <ExpensesChart expenses={filteredExpenses}/>
+                <ExpensesList items={props.items}/>
             </Card>
         </div>
     )
